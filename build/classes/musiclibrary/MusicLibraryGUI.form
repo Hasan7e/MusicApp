@@ -38,8 +38,8 @@
                       <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jButton3" alignment="0" max="32767" attributes="0"/>
                           <Component id="jPanel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton3" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -146,7 +146,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="0" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add to Rap song"/>
+        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
@@ -154,7 +158,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="0" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add to Pop song"/>
+        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>

@@ -35,6 +35,7 @@ public class MusicLibraryGUI extends javax.swing.JFrame {
         newSong.setName(newSongName);
         likedSong.addSong(newSong); // Add  new song to the liked list
         jTextField1.setText("");
+        JOptionPane.showMessageDialog(null,newSong+" Has been added to the Liked playlist");
     }
 }
     /**
@@ -96,14 +97,18 @@ public class MusicLibraryGUI extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jLabel3.setText("Select the option below to add it to a favourite playlist of genre ");
 
+        jButton2.setBackground(new java.awt.Color(0, 153, 153));
         jButton2.setText("Add to Rap song");
+        jButton2.setOpaque(true);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(0, 153, 153));
         jButton3.setText("Add to Pop song");
+        jButton3.setOpaque(true);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -279,8 +284,8 @@ public class MusicLibraryGUI extends javax.swing.JFrame {
                         .addGap(80, 80, 80)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
@@ -356,6 +361,7 @@ public class MusicLibraryGUI extends javax.swing.JFrame {
         if (!likedSong.getSongStack().isEmpty()) {
         Song lastSong = likedSong.getSongStack().peek();
         rapSongLibrary.addSong(lastSong);
+        JOptionPane.showMessageDialog(null, lastSong+" Has been added to Rap song list");
     }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -364,6 +370,7 @@ public class MusicLibraryGUI extends javax.swing.JFrame {
          if (!likedSong.getSongStack().isEmpty()) {
         Song lastSong = likedSong.getSongStack().peek();
         popSongLibrary.addSong(lastSong);
+        JOptionPane.showMessageDialog(null, lastSong+" Has been added to pop song list");
     }
     }//GEN-LAST:event_jButton3ActionPerformed
 
